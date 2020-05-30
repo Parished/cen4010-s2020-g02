@@ -1,1 +1,7 @@
-# cen4010-s2020-g01-
+# Group 01
+Members:
+  - Elizabeth Garcia
+  - Ryan Bates
+  - Jesse Kelly
+  - Oscar Aquino 
+ 
