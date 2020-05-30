@@ -1,4 +1,4 @@
-# Group 01
+# Group 02
 Members:
   - Elizabeth Garcia
   - Ryan Bates
