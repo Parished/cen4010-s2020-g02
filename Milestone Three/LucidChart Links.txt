@@ -1,0 +1,4 @@
+UML for use case scenerio:
+https://app.lucidchart.com/documents/view/f787050f-949f-4614-a235-94f5ef5ffc3e/0_0
+UML for classes and database tables:
+https://app.lucidchart.com/documents/view/f787050f-949f-4614-a235-94f5ef5ffc3e/0_0
