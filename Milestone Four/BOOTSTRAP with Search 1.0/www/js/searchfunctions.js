@@ -28,6 +28,7 @@ async function apiCall(){
     document.querySelector('#country_details').innerHTML = api_response_print.Country;
     document.querySelector('#plot_details').innerHTML = api_response_print.Plot;
     document.querySelector('#poster_details').src = api_response_print.Poster;
+	console.log(api_response_print);
 }
     
 
