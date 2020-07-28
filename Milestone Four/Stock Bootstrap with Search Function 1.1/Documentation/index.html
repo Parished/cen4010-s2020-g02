@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HotFlix Documentation</title>
+		<meta name="description" content="Documentation">
+		<meta charset="utf-8">
+		<meta name="author" content="Dmitry Volkov">
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="css/main.css">
+	
+	</head>
+
+	<body data-spy="scroll" data-target=".scroll_bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3 sidebar">
+					<nav class="scroll_bar">
+						<ul class="nav">
+							<li><a href="#started">Getting Started</a></li>
+							<li><a href="#structure">HTML structure</a></li>
+							<li><a href="#logo">Logotype</a></li>
+							<li><a href="#home">Home Section</a></li>
+							<li><a href="#section">Sections</a></li>
+							<li><a href="#player">Video Player</a></li>
+							<li><a href="#gallery">Fullscreen Gallery</a></li>
+							<li><a href="#credits">Credits</a></li>
+							<li><a href="#support">Support</a></li>
+						</ul>
+					</nav>
+				</div>
+
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-3 content">
+					<div class="title">
+						<h1>HotFlix Documentation</h1>
+						<p>Hello! Thank you for purchasing!</p>
+						<span>Created: 21/11/2019</span>
+						<span>By: <a href="https://themeforest.net/user/dmitryvolkov/portfolio?ref=DmitryVolkov" target="_blank">Dmitry Volkov</a></span>
+						<span>Email: <a href="mailto:dmitry.volkov.vetrov@gmail.com">dmitry.volkov.vetrov@gmail.com</a></span>
+					</div>
+
+					<div id="started" class="started">
+						<h2>Getting Started</h2>
+						<p>Unzip the archive and find out the folder www. There are all the template files in this folder. You can open the following files for viewing in browser.</p>
+						<ul>
+							<li><strong>/css</strong> — folder with css files.</li>
+							<li><strong>/fonts</strong> — folder with icon fonts.</li>
+							<li><strong>/icon</strong> — folder with favicons.</li>
+							<li><strong>/img</strong> — folder with image files.</li>
+							<li><strong>/js</strong> — folder with javascript files. <br> <br></li>
+							<li><strong>index.html</strong> — home page style 1.</li>
+							<li><strong>index2.html</strong> — home page style 2.</li>
+							<li><strong>catalog.html</strong> — catalog page.</li>
+							<li><strong>details.html</strong> — details page.</li>
+							<li><strong>about.html</strong> — about page.</li>
+							<li><strong>faq.html</strong> — faq page.</li>
+							<li><strong>pricing.html</strong> — pricing page.</li>
+							<li><strong>profile.html</strong> — profile page.</li>
+							<li><strong>contacts.html</strong> — contacts page.</li>
+							<li><strong>privacy.html</strong> — privacy policy page.</li>
+							<li><strong>signin.html</strong> — signin page.</li>
+							<li><strong>signup.html</strong> — signup page.</li>
+							<li><strong>forgot.html</strong> — forgot password page.</li>
+							<li><strong>404.html</strong> — 404 page.</li>
+						</ul>
+						<p>Upload the template files (inside the folder www) to server with the help of one of the FTP-clients.</p>
+					</div>
+
+					<div id="structure">
+						<h2>HTML structure</h2>
+						<p>In my theme I use Bootstrap grid, if you don't know how to use it, <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">here</a> is a detailed information on its use.</p>
+						<p>The standard section has the following HTML structure:</p>
+<pre>
+&lt;section class="section"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-12"&gt;
+        &lt;h2 class="section__title"&gt;Expected premiere&lt;/h2&gt;
+      &lt;/div&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+					</div>
+
+					<div id="logo" class="logo">
+						<h2>Logotype</h2>
+						<p>To change logotype, find image <strong>img/logo.svg</strong> and replace it with your logo.</p>
+					</div>
+
+					<div id="home" class="home">
+						<h2>Home</h2>
+						<p>Section have a two different styles:</p>
+
+						<br>
+						<p>section with static background image</p>
+<pre>
+&lt;section class="home home--bg"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+
+						<br>
+						<p>section with background slideshow</p>
+<pre>
+&lt;section class="home"&gt;
+  &lt;div class="owl-carousel home__bg"&gt;
+    &lt;div class="item home__cover" data-bg="img/home/home__bg.jpg"&gt;&lt;/div&gt;
+    &lt;div class="item home__cover" data-bg="img/home/home__bg2.jpg"&gt;&lt;/div&gt;
+    &lt;div class="item home__cover" data-bg="img/home/home__bg3.jpg"&gt;&lt;/div&gt;
+    &lt;div class="item home__cover" data-bg="img/home/home__bg4.jpg"&gt;&lt;/div&gt;
+    ...
+  &lt;/div&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+					</div>
+
+					<div id="section" class="section">
+						<h2>Sections</h2>
+						<p>By default section have white background color, but you may change style:</p>
+
+						<br>
+						<p><strong>section--bg</strong> – section with static background image</p>
+<pre>
+&lt;section class="section section--bg" data-bg="img/section/section-bg.jpg"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+						
+						<br>
+						<p><strong>section--first</strong> – section with <code>margin-top</code></p>
+<pre>
+&lt;section class="section section--first"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;	
+</pre>
+						<br>
+						<p><strong>section--dark</strong> – section with <code>border-top</code></p>
+<pre>
+&lt;section class="section section--border"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+					</div>
+
+					<div id="player" class="player">
+						<h2>Video Player</h2>
+						<p>I strongly recommend that you familiarize yourself with the <a href="https://github.com/sampotts/plyr">documentation</a> for Plyr. There you can find detailed information about how the plugin works.</p>
+					</div>
+
+					<div id="gallery" class="gallery">
+						<h2>Fullscreen Gallery</h2>
+						<p>I strongly recommend that you familiarize yourself with the <a href="http://photoswipe.com/documentation/getting-started.html">documentation</a> for PhotoSwipe. There you can find detailed information about how the plugin works.</p>
+					</div>
+
+					<div id="credits" class="credits">
+						<h2>Credits</h2>
+						<ul>
+							<li><a href="http://jquery.com/">jQuery</a></li>
+							<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+							<li><a href="https://owlcarousel2.github.io/OwlCarousel2/">Owl Carousel</a></li>
+							<li><a href="https://github.com/jquery/jquery-mousewheel">Mousewheel</a></li>
+							<li><a href="https://github.com/malihu/malihu-custom-scrollbar-plugin">mCustomScrollbar</a></li>
+							<li><a href="https://github.com/leongersen/wnumb">wNumb</a></li>
+							<li><a href="https://github.com/leongersen/noUiSlider">Nouislider</a></li>
+							<li><a href="https://github.com/sampotts/plyr">Plyr</a></li>
+							<li><a href="https://github.com/tsurule/morelines">Morelines</a></li>
+							<li><a href="http://photoswipe.com/">PhotoSwipe</a></li>
+							<li><a href="https://ionicons.com/">Ionicons</a></li>
+						</ul>
+					</div>
+
+					<div id="support" class="support">
+						<h2>Support</h2>
+						<p>If you have any questions, feel free to contact me at <a href="mailto:dmitry.volkov.vetrov@gmail.com">dmitry.volkov.vetrov@gmail.com</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
