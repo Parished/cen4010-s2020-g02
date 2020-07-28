@@ -17,7 +17,7 @@ function consoleTitle(){
 async function apiCall(){
     let movie_name_storage = localStorage.getItem('title');
     
-    const response = await fetch('http://www.omdbapi.com/?t=' + movie_name_storage + encodeURI('&apikey=7b3941a8')+ "&plot=full");
+    const response = await fetch('https://www.omdbapi.com/?t=' + movie_name_storage + encodeURI('&apikey=7b3941a8')+ "&plot=full");
     const api_response_print = await response.json();
     document.querySelector('#details_title').innerHTML = api_response_print.Title;
     document.querySelector('#director_name').innerHTML = api_response_print.Director;
