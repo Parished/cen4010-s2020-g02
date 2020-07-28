@@ -13,12 +13,12 @@ function consoleTitle(){
     console.log('Hello, Console!')
 }
 
-function apiCall(){
+  
+async function apiCall(){
     let movie_name_storage = localStorage.getItem('title');
-    $.getJSON('http://www.omdbapi.com/?t=' + movie_name_storage + encodeURI('&apikey=7b3941a8') + "&plot=full").then(function(response){
-    console.log(response);
-    let api_response_print = response;
     
+    const response = await fetch('http://www.omdbapi.com/?t=' + movie_name_storage + encodeURI('&apikey=7b3941a8')+ "&plot=full");
+    const api_response_print = await response.json();
     document.querySelector('#details_title').innerHTML = api_response_print.Title;
     document.querySelector('#director_name').innerHTML = api_response_print.Director;
     document.querySelector('#cast_names').innerHTML = api_response_print.Actors;
@@ -28,12 +28,9 @@ function apiCall(){
     document.querySelector('#country_details').innerHTML = api_response_print.Country;
     document.querySelector('#plot_details').innerHTML = api_response_print.Plot;
     document.querySelector('#poster_details').src = api_response_print.Poster;
-    
-    
-
-
-   });
 }
+    
+
 
 document.addEventListener('DOMContentLoaded', search_movie);
 
